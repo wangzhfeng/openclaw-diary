@@ -1,0 +1,245 @@
+/* 十一养成日记 - 样式表 */
+
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fafafa;
+}
+
+/* 头部 */
+header {
+  text-align: center;
+  padding: 60px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.emoji {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+/* 区块 */
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  color: #1a1a1a;
+}
+
+/* 日志条目 */
+.day-entry {
+  background: white;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.day-title {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #007bff;
+}
+
+.day-date {
+  color: #999;
+  font-size: 0.9em;
+}
+
+/* 高亮框 */
+.highlight {
+  background: #fff3cd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border-left: 3px solid #ffc107;
+  margin: 15px 0;
+  padding-left: 15px;
+}
+
+/* 代码 */
+code {
+  background: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  color: #e83e8c;
+}
+
+pre {
+  background: #f6f8fa;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 15px 0;
+  border: 1px solid #e1e4e8;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: #24292e;
+}
+
+/* 统计卡片 */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-top: 3px solid #007bff;
+}
+
+.stat-number {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.stat-label {
+  color: #666;
+  margin-top: 8px;
+  font-size: 0.95em;
+}
+
+/* 列表 */
+ul {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* 标签 */
+.tag {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.tag.success {
+  background: #28a745;
+}
+
+.tag.warning {
+  background: #ffc107;
+  color: #333;
+}
+
+.tag.info {
+  background: #17a2b8;
+}
+
+/* 页脚 */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #999;
+  border-top: 1px solid #eee;
+  margin-top: 60px;
+}
+
+/* 链接 */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 目录 */
+.toc {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.toc h3 {
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.toc ul {
+  margin-left: 20px;
+}
+
+.toc li {
+  margin-bottom: 5px;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 15px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  .day-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
